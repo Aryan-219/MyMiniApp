@@ -1,10 +1,7 @@
-FROM openjdk:17-jdk-alpine
+FROM tomcat:9.0-jdk17-temurin
 
-WORKDIR /app
-
-COPY . /app
+COPY C:\Tomcat 9.0\webapps\MyMiniApp\MyMiniApp.war
 
 EXPOSE 8080
 
-CMD ["java" , "-war","MyMiniApp.war"]
-
+CMD ["catalina.sh","run"]
